@@ -1,9 +1,3 @@
-package org.example;
-import java.util.Random;
-import java.util.Scanner;
-import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.CyclicBarrier;
-
 
 public class Main {
 
@@ -35,7 +29,7 @@ public class Main {
             ArrayOfStudents2[i] = new Student(CGPA);
         }
 
-        //Print unsorted array
+        //Print unsorted array 
         print(ArrayOfStudents1);
 
         long t = System.currentTimeMillis(); //take start time
@@ -44,7 +38,7 @@ public class Main {
 
         System.out.println("\nSorted Students CGPA:");
 
-        print(ArrayOfStudents1); //Print sorted array
+        print(ArrayOfStudents1); //Print sorted array 
 
         System.out.println("Time spent for No Paralle Odd Even Transposition Sort: " + t + "ms");
 
@@ -129,9 +123,9 @@ public class Main {
 }
 
 class CompareSwapThread implements Runnable {
-    private Student[] arr;
-    private int index;
-    private CyclicBarrier barr;
+private Student[] arr;
+private int index;
+private CyclicBarrier barr;
 
     //Compare and exchange the consecutive elements of the array
     public CompareSwapThread(Student[] arr, int index, CyclicBarrier barr) {
@@ -167,7 +161,7 @@ class CompareSwapThread implements Runnable {
 
 class Student
 {
-    float CGPA;
+float CGPA;
 
     public Student(float CGPA) {
         this.CGPA = CGPA;
